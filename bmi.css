@@ -18,23 +18,19 @@ color: #fff;
 z-index: 2;
 }
 .testbox {
+ 
 display: flex;
 justify-content: center;
 align-items: center;
 height: inherit;
 padding: 20px;
+
 }
-form {
-width: 50%;
-padding: 20px;
-border-radius: 6px;
-background: #fff;
-box-shadow: 0 0 10px 0 #cc0052; 
-}
+
 .banner {
 position: relative;
-height: 210px;
-background-image: url("https://www.bing.com/images/blob?bcid=r7tanqDNBpIFKw");      background-size: cover;
+height: 600px;
+background-image: url("https://www.fitterfly.com/blog/wp-content/uploads/2023/02/Understanding-Your-BMI-A-Guide-to-Reading-a-BMI-Chart.jpg");      background-size: cover;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -105,4 +101,10 @@ width: calc(50% - 20px);
 .contact-item input {
 width: calc(100% - 12px);
 }
+}
+
+#result {
+    margin-top: 50px;
+    color: #cc0052;
+    font-weight: 700;
 }
