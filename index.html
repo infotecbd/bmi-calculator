@@ -12,33 +12,31 @@
 
 
 <body>
-    <div class="testbox">
-      <form id="form">
-        <div class="banner">
-          <h1>Body Mass Index Calculator</h1>
-        </div>
-     
-        <div class="contact-item">
-          <div class="item">
-            <p>Height</p>
-            <input id="heightInput" type="text">
-          </div>
-          <div class="item">
-            <p>Weight</p>
-            <input id="weightInput" type="text">
-          </div>
-        </div>
-        
-        
-        <div class="btn-block">
-            <button id="calculateBtn"> Calculate</button>
-        </div>
 
-      </form>
-      <h3 class="result"></h3>
-      <p class="result-statement"></p>
-    </div>
+ 
+  </div>
+  <div class="banner">
+    <h1>Body Mass Index Calculator</h1>
+  </div>
+    
+    <div class="testbox">
+
+     
+        
+
+    <div id="container">
+    
+      <label>Height (cm):</label>
+      <input type="number" id="heightInput">
+      <label>Weight (kg):</label>
+      <input type="number" id="weightInput" >
+      <button onclick="calculateBMI()">Calculate</button>
+      <div id="result"></div>
+  </div> </div>
+
+
   </body>
+
 
 <script src="script.js"></script>
 </html>

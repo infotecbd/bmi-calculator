@@ -1,24 +1,30 @@
-var heightInput = document.querySelector("#heightInput");
-var weightInput = document.querySelector("#weightInput");
-var calculateButton = document.querySelector("#calculateBtn");
-var result = document.querySelector(".result");
-var statement = document.querySelector(".result-statement");
-var BMI, height, weight;
+function calculateBMI() {
+    var heightInput = document.getElementById("heightInput");
+    var weightInput = document.getElementById("weightInput");
+    var resultDiv = document.getElementById("result");
 
-calculateButton.addEventListener("click", ()=>{
-    
-    height = heightInput.value;
-    weight = weightInput.value;
-    BMI = weight/(height**2); 
-    result.innerText = BMI;
+    var height = parseFloat(heightInput.value);
+    var weight = parseFloat(weightInput.value);
 
-    if(BMI < 18.5){
-        statement.innerText = "Your BMI falls within the underweight range";    
-    }else if((BMI > 18.5) && (BMI <= 24.9)){
-        statement.innerText = "Your BMI falls within the normal or healthy weight range";
-    }else if((BMI >= 25) && (BMI <= 29.9 )){
-        statement.innerText = "Your BMI falls within the overweight range";
-    }else{
-        statement.innerText = "Your BMI falls within the obese range";
+    if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+        resultDiv.innerHTML = "Please enter valid values for height and weight.";
+        return;
     }
-});
+
+    var bmi = weight / ((height / 100) * (height / 100));
+    bmi = bmi.toFixed(2);
+
+    var category;
+    if (bmi < 18.5) {
+        category = "Underweight";
+    } else if (bmi < 24.9) {
+        category = "Normal weight";
+    } else if (bmi < 29.9) {
+        category = "Overweight";
+    } else {
+        category = "Obese";
+    }
+
+    var result = "BMI: " + bmi + "<br>Category: " + category;
+    resultDiv.innerHTML = result;
+}
