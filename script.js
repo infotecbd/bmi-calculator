@@ -11,7 +11,7 @@ function calculateBMI() {
         return;
     }
 
-    var bmi = weight / ((height / 100) * (height / 100));
+    var bmi = weight / ((height * height ));
     bmi = bmi.toFixed(2);
 
     var category;
